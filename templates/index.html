@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>USD to TRY Converter</title>
+  </head>
+  <body>
+    <h1>USD to TRY Converter</h1>
+    <form method="post">
+      <label for="usd">USD Amount:</label>
+      <input type="number" name="usd" step="0.01" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+      <h2>Result: {{ result }} TRY</h2>
+    {% endif %}
+
+    {% if error %}
+      <p style="color: red;">{{ error }}</p>
+    {% endif %}
+  </body>
+</html>
